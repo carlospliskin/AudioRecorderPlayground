@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="serv" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t67-if-fiA">
+                                <rect key="frame" x="98" y="364" width="79" height="30"/>
+                                <state key="normal" title="RECORDER"/>
+                                <connections>
+                                    <action selector="Record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMS-1f-GgQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIn-T9-8Py">
+                                <rect key="frame" x="242" y="364" width="36" height="30"/>
+                                <state key="normal" title="PLAY"/>
+                                <connections>
+                                    <action selector="PlaySound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VOf-I9-lRa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t67-if-fiA" firstAttribute="baseline" secondItem="kIn-T9-8Py" secondAttribute="baseline" id="BYm-r5-rez"/>
+                            <constraint firstItem="kIn-T9-8Py" firstAttribute="leading" secondItem="t67-if-fiA" secondAttribute="trailing" constant="65" id="ZBu-pW-JH6"/>
+                            <constraint firstItem="t67-if-fiA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="bx2-gd-jfl"/>
+                            <constraint firstItem="t67-if-fiA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="320" id="lpH-fa-QIb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="RecorderBTN" destination="t67-if-fiA" id="Hp2-PY-I6h"/>
+                        <outlet property="playBTN" destination="kIn-T9-8Py" id="C4f-zj-psW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
